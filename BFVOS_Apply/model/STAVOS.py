@@ -337,7 +337,7 @@ class VOS(nn.Module):
 
 # TBD 模型
 
-class BFVOS(nn.Module):
+class STAVOS(nn.Module):
     def __init__(self):
         super().__init__()
         self.vos = VOS()
