@@ -14,14 +14,14 @@ warnings.filterwarnings('ignore')
 
 
 def main():
-    print("请输入要执行的视频名字")        # N0088
+    print("请输入要执行的视频名字")          # N0068 N0080 R0039 
     video_name = input()  # 视频必须在../input/下
 
     # 检查是否存在该视频
     file_exists = os.path.exists("../input/" + video_name + ".avi")
     while not file_exists:
         print("../input/" + video_name + ".avi", "不存在!!!")
-        print("请输入正确的要执行的视频名...")   # N0068 N0080 N0094
+        print("请输入正确的要执行的视频名...") 
         video_name = input()
         file_exists = os.path.exists("../input/" + video_name + ".avi")
 
