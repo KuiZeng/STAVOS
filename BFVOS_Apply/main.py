@@ -27,7 +27,7 @@ def main():
 
     # 创建所有需要的文件夹目录
     out_path = create_all_dir("../output/" + video_name + "/")  # 如果不存在,则新建文件夹      如果存在,则新建非重名文件夹
-    fps, imgs, best_frame_id = videoLoad(video_name, out_path)
+    fps, imgs, sta_id = videoLoad(video_name, out_path)
     _, L, _, H, W = imgs.shape
 
     # 检查是否制作好最佳帧标签
@@ -45,13 +45,13 @@ def main():
     best_frame_mask = best_frame_mask_load(mask)
 
     # 加载模型和数据
-    model_name = "model/N_better_0400.pth"
+    model_name = "model/R_better_0400.pth"
     imgs = imgs.cuda()
     given_masks = [best_frame_mask.cuda()] + [None] * (L - 1)
     dist = get_dist(H, W)
 
     print("所有数据已处理完毕，即将进行预测")
-    vos_out = model_predict(model_name, imgs, given_masks, dist.unsqueeze(0), best_frame_id)
+    vos_out = model_predict(model_name, imgs, given_masks, dist.unsqueeze(0), sta_id)
     print(vos_out["masks"].shape)
     save_predict(vos_out, out_path, video_name)
 
