@@ -16,9 +16,9 @@ def videoLoad(video_name, out_path):  # 定义一个视频加载函数，参数�
     ret = True  # 设置ret初始值
     i = 0
 
-    best_frame_id = 0
+    sta_id = 0
     max_sharpness = 0
-    best_frame = None
+    sta_frame = None
 
     while ret:  # 当ret为True时(没读到末尾),继续读取
         ret, frame = video.read()  # videoCapture.read()按帧读取视频
@@ -32,8 +32,8 @@ def videoLoad(video_name, out_path):  # 定义一个视频加载函数，参数�
             # 如果当前帧的清晰度比之前的帧都高，更新关键帧
             if sharpness > max_sharpness:
                 max_sharpness = sharpness
-                best_frame = frame.copy()
-                best_frame_id = i
+                sta_frame = frame.copy()
+                sta_id = i
 
             frame = frame.astype(np.float32) / 255  # 归一化并转float32
             img = torch.from_numpy(frame).permute(2, 0, 1)  # (H, W, C)的numpy.ndarray或img转为(C, H, W)的tensor
@@ -43,14 +43,14 @@ def videoLoad(video_name, out_path):  # 定义一个视频加载函数，参数�
     imgs = torch.stack(frames).unsqueeze(0)
     print("视频读取成功,最佳帧为：", best_frame_id)
 
-    cv2.imwrite(out_path + "best_frame.png", best_frame)
-    return fps, imgs, best_frame_id
+    cv2.imwrite(out_path + "sta_frame.png", sta_frame)
+    return fps, imgs, sta_id
 
 
 def json_to_mask(out_path, H, W):
     mask = np.zeros([H, W, 1], np.uint8)  # 创建一个大小和原图相同的纯黑画布
 
-    with open(out_path + "best_frame.json", "r") as file:  # 读取json文件
+    with open(out_path + "sta_frame.json", "r") as file:  # 读取json文件
         json_file = json.load(file)
 
     shapes = json_file["shapes"]
