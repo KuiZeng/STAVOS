@@ -34,7 +34,7 @@ if __name__ == '__main__':
 
     with torch.no_grad():
         for dataset_name, dataset in datasets.items():
-            model_predict(model, dataset, "test_predict/" + dataset_name)
+            model_predict(model, dataset, "../test_predict/" + dataset_name)
 
 
 
