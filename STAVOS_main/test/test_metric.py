@@ -56,14 +56,14 @@ def get_metric_json(predict_path, true_path, save_path):
             miou_list.append(miou)
             i += 1
 
-            
+
         video_recall[video_name] = sum(recall_list) / len(recall_list)
         video_precision[video_name] = sum(precision_list) / len(precision_list)
         video_accuracy[video_name] = sum(accuracy_list) / len(accuracy_list)
         video_f1[video_name] = sum(f1_list) / len(f1_list)
         video_iou[video_name] = sum(iou_list) / len(iou_list)
         video_miou[video_name] = sum(miou_list) / len(miou_list)
-        print("平均iou, 平均miou", video_iou[video_name], video_miou[video_name])
+        print(video_name, "平均recall:", video_recall[video_name], "平均precision:", video_precision[video_name], "平均accuracy:", video_accuracy[video_name], "平均f1:", video_f1[video_name], "平均iou:", video_iou[video_name], "平均miou:", video_miou[video_name])
 
         video_metric = {"recall_list": recall_list, "video_recall": video_recall[video_name],
                         "precision_list": precision_list, "video_precision": video_precision[video_name],
