@@ -1,6 +1,8 @@
-# STAVOS-Zebrafish_Segmentation
-STAVOS folder: Training STA model weights
-STAVOS_ Zebrafish folder: Applying STA model weights to zebrafish ventricular segmentation
+![electrocardiogram](https://github.com/KuiZeng/STAVOS/assets/139167726/b3a1650b-aab5-4d2c-8007-a1ad74d4af0f)
+
+
+
+
 The STA model can be used to segment general videos
 
 
