@@ -8,10 +8,19 @@
 ![visual_00012](https://github.com/KuiZeng/STAVOS/assets/139167726/2a20d1c4-9d31-4f42-afe6-3f13290d302a)
 
 
-The STA model can be used to segment general videos
+
+STAVOS_main folder: code for training and testing the weights of the STAVOS model
+The STAVOS model can be used to segment general videos
+STAVOS_medaka folder: automation system for medaka ventricle
+input folder:the video to be inputted
+Output folder: The output result of the automation system
 
 
+Due to the upper limit on the file size uploaded by GitHub, the dataset and model weights cannot be uploaded here
+Data-medaka-Lateral-right folder: N datasets
+Data-medaka-Ventural folder: R dataset
 Davis dataset download address: https://davischallenge.org.
+
 
 
 
