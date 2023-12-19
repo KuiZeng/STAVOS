@@ -5,20 +5,26 @@
 
 
 
+### folder introduce：
 STAVOS_main folder: code for training and testing the weights of the STAVOS model
 The STAVOS model can be used to segment general videos
 STAVOS_medaka folder: automation system for medaka ventricle
 input folder:the video to be inputted
 Output folder: The output result of the automation system
-
-
-Due to the upper limit on the file size uploaded by GitHub, the dataset and model weights cannot be uploaded here
 Data-medaka-Lateral-right folder: N datasets
 Data-medaka-Ventural folder: R dataset
+
+
+### data acquisition
+Due to the upper limit on the file size uploaded by GitHub, the dataset and model weights cannot be uploaded here.
+You can obtain it from the following address:47.96.156.188/tools, or contact email:2514819977@qq.com
+
 Davis dataset download address: https://davischallenge.org.
-
-
-
 
 Deep learning environment：conda install pytorch==1.12.0 torchvision==0.13.0 torchaudio==0.12.0 cudatoolkit=11.3 -c pytorch
 Other libraries: Install whatever is missing.
+
+
+
+### How to use:
+  
