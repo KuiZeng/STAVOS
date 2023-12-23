@@ -26,11 +26,11 @@ STAVOS_ Medaka is responsible for the application of Medaka, which can segment t
 
 # data acquisition
 Due to the upper limit on the file size uploaded by GitHub, the dataset and model weights cannot be uploaded here.
-You can obtain it from the following address:47.96.156.188/tools, or contact email:2514819977@qq.com
 
-##### Data-medaka-Lateral-right folder: 47.96.156.188/tools or 2514819977@qq.com
-##### Data-medaka-Ventural folder: 47.96.156.188/tools or 2514819977@qq.com
-##### trained_model: 47.96.156.188/tools or 2514819977@qq.com
+
+##### Data-medaka-Lateral-right folder: https://cowtransfer.com/s/d2546440518240
+##### Data-medaka-Ventural folder: https://cowtransfer.com/s/3d0ed4b3d8ae4b
+##### trained_model: https://cowtransfer.com/s/7c37a69ceedf4d
 ##### DAVIS-2016-trainval:https://davischallenge.org.
 ##### DAVIS-2017-trainval-480p:https://davischallenge.org.
 
@@ -46,7 +46,7 @@ You can obtain it from the following address:47.96.156.188/tools, or contact ema
   ##### --STAVOS_main
   #####   run "train_main.py" for model training
   #####   run "test_main.py" for model testing
-  ##### You can also download the trained model from 47.96.156.188/tools or 2514819977@qq.com
+  ##### You can also download the trained model from https://cowtransfer.com/s/6ec386cb595042, or contact email:2514819977@qq.com
 ## 5, application
   ##### --STAVOS_medaka
   #####   run "main.py" for medaka ventricular segmentation and parameter acquisition
